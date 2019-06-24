@@ -26,12 +26,7 @@ namespace BeautyForestAgent
             VisibleChange(true);
         }
 
-        private void 끝내기ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.ntiTray.Visible = false;
-            Application.ExitThread();
-        }
-
+     
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
@@ -48,9 +43,58 @@ namespace BeautyForestAgent
             VisibleChange(true);
         }
 
+        private void 수정ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowModify();
+
+        }
+
+        private void BtnModify_Click(object sender, EventArgs e)
+        {
+            ShowModify();
+        }
+
+
+        private void ShowModify()
+        {
+            this.statusMessage.Text = "수정 창을 띄웁니다.";
+            FormModify m = new FormModify();
+            m.Title = "수정 창띄우기";
+            m.ShowDialog();
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            ShowAdd();
+
+        }
+
+
+        private void 추가ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowAdd();
+        }
+        private void ShowAdd()
+        {
+            this.statusMessage.Text = "추가 창을 띄웁니다.";
+            FormAdd m = new FormAdd();
+            m.Title = "추가 창띄우기";
+            m.Show();
+        }
+
+        private void 이프로그램은ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.statusMessage.Text = "이 프로그램은..";
+            FormAbout m = new FormAbout();
+            m.Title = "이 프로그램은";
+            m.ShowDialog();
+
+        }
+
         private void 끝내기ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            this.statusMessage.Text = "종료합니다.";
+            Application.ExitThread();
         }
     }
 
