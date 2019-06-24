@@ -107,6 +107,7 @@
     <Content Include="img\add.PNG" />
     <Content Include="img\demo.PNG" />
     <Content Include="img\modify.PNG" />
+    <Content Include="img\수기1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
